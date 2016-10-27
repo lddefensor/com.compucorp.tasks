@@ -34,10 +34,11 @@
 			 			var label = relDate.label;  
 		  	 	});
 		  	 	
-		  	 	$scope.$watch('dateValue', function(newValue, oldValue){
-		  	 		if(newValue != oldValue)
+		  	 	$scope.$watchGroup(['dateRangeStart', 'dateValue', 'dateRangeEnd'], function(newValue, oldValue){
+		  	 		
+		  	 		if($scope.dateValue != '0')
 		  	 		{
-		  	 			var date = RelativeDate.getRangeDates(newValue);
+		  	 			var date = RelativeDate.getRangeDates($scope.dateValue);
 		  	 			if(date == false)
 			 			{
 			 				$scope.dateValue = '';
@@ -59,10 +60,11 @@
 			 				$scope.dateRangeStart = null;
 			 				$scope.dateRangeEnd = null;
 			 				$scope.model =  $scope.date;
-			 			}
-			 			
-			 			//$scope.$parent['onChange_'+$scope.form.name].call($scope.$parent, $scope.date, $scope.dateRangeStart, $scope.dateRangeEnd);
-			 			
+			 			}  
+			 		}
+			 		else   
+			 		{
+			 			$scope.model =  [$scope.dateRangeStart, $scope.dateRangeEnd];
 			 		}
 			 		
 			 	}); 
@@ -92,7 +94,7 @@
 	 			}
 	 			
 	 			$(select).on('change', function(event){ 
-	 				scope.dateValue = event.val;
+	 				scope.dateValue = event.val;  
 	 				scope.$apply();
 	 			});
 	 			

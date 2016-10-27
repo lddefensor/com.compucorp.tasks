@@ -8,19 +8,18 @@
 	</select>
 </div>
 
-<div class="form-group" ng-show="dateValue == '0'">
+<div class="form-group datepicker" ng-show="dateValue == '0'">
 	<label>From:</label>
 	<input type="text" format="{{form.format}}" datepicker ng-model="dateRangeStart" name="from_{{form.name}}" /> 
-</div>
-
-<div class="form-group"  ng-show="dateValue == '0'">
+</div> 
+<div class="form-group datepicker"  ng-show="dateValue == '0'">
 	<label>To:</label>
-	<input type="text" format="{{form.format}}" datepicker ng-model="dateRangeEnd" name="to_{{form.name}}" /> 
+	<input type="text" format="{{form.format}}" datepicker  ng-model="dateRangeEnd" name="to_{{form.name}}" /> 
 </div>
 </form>
 
 <input type="hidden" ng-model="model" /> 
-<form class="navbar-form navbar-right"  > 
+<form class="navbar-form navbar-right"  ng-hide="dateValue == '0'" > 
 <div class="form-group">
 	<div class="btn btn-link" disabled>
 		<span ng-if="date"> 

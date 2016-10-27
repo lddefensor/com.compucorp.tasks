@@ -10,19 +10,7 @@ require_once 'tasks.civix.php';
 function tasks_civicrm_config(&$config) {
   _tasks_civix_civicrm_config($config);
 }
-
-/**
- * Implements hook_civicrm_xmlMenu().
- *
- * @param array $files
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_xmlMenu
- */
-function tasks_civicrm_xmlMenu(&$files) { 
-  _tasks_civix_civicrm_xmlMenu($files);
-  var_dump($files);
-}
-
+ 
 /**
  * Implements hook_civicrm_install().
  *

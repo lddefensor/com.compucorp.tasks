@@ -7,6 +7,8 @@
 	};
 	app.filter('filterStartEndDate', function($filter) {   
    		return function(array, startDate, endDate){
+   			if(!array) return array;
+   			if(!array.length) return array;
    			if(!startDate && !endDate) return array; // INVALID arguments
    			
    			//check if startDate, endDate is array or string 
