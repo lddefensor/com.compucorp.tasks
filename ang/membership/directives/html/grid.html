@@ -1,0 +1,19 @@
+<table class="table table-striped table-hover">
+	<thead>
+		<tr>
+			<th ng-repeat="field in fields">
+				<span field="field.name">
+					{{field.label}}
+				</span>
+			</th>
+		</tr>
+	</thead> 
+	<tbody>
+		<tr  ng-repeat="rowdata in data  | filterStartEndDate:startDate:endDate| startIndex: paginationState.startIndex: sortKey : reverse | orderBy: sortKey:reverse  | limitTo: paginationState.numItems">
+			 <td ng-repeat="field in fields" field="field"> 
+			 </td>
+		</tr>	
+	</tbody>
+</table>
+{{startDate}}
+{{endDate}}

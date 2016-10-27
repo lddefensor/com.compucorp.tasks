@@ -1,0 +1,71 @@
+body {
+  font-size: 100% !important;
+}
+.weather-app
+{ 
+    font-family: Calibri;  
+}
+
+.weather-app .app > * > div
+{
+	
+  position: absolute;
+  top: 90px;
+  left: calc(100vw - 50% - 100px);
+  z-index: 14; 
+}
+
+.weather-app.launched  
+{ 
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 64px);   
+}
+
+button:focus
+{
+    outline: 0 !important;
+}
+.main-button
+{
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+
+    /** put a shadow **/
+    box-shadow: 0 5px 10px black;
+ 
+    padding: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+ 
+}
+.main-button:hover 
+{ 
+}
+
+.weather-app.launched .main-button
+{
+    z-index: 11;
+
+}
+
+.weather-app.launched > .app-wrapper
+{ 
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 64px);
+    background: black;
+    z-index: 10;  
+    opacity: 0.5;
+}
+
+
+.weather-app .app 
+{ 
+}

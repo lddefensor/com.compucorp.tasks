@@ -1,0 +1,17 @@
+/* Add any CSS rules for Angular module "compucorp" */
+body
+{
+    font-size: 14px !important;
+}
+
+[date-range-search] .select2-container.form-control
+{
+   padding: 0 !important;
+   border: none;
+   background: transparent; 
+   
+}
+[date-range-search] .select2-container.form-control > a
+{ 
+    height: 30px;
+}

@@ -1,0 +1,55 @@
+get-location
+{
+  padding: 0;
+  display: block;
+}
+get-location  > div
+{ 
+  background: white;
+  padding: 20px ;
+  border-radius: 20px;
+  width: 60vw;
+  
+  position: fixed;
+  left: 20vw !important; 
+  text-align: center;
+  top: 40px !important;
+
+  font-size: 100% !important;
+}
+
+get-location  .alert
+{   
+  text-align: left;
+  font-size: 20px;
+}
+
+get-location  select 
+{   
+  display: none !important;
+}
+get-location  .select2-container.form-control
+{
+  border:none;
+  box-shadow:none;
+  padding: 0;
+  margin: 0;
+  font-family: Calibri;
+}
+get-location  .select2-container > a
+{   
+  width: 100% !important;
+  height: 48px !important;
+  border-color: #666!important;
+  background: white !important;
+  text-align: left;
+  font-size: 14px !important;
+  padding: 12px !important;
+  color: #555;
+}
+
+get-location  .select2-container > a > span
+{    
+  font-size: 14px !important; 
+  color: #555;
+}

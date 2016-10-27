@@ -1,0 +1,37 @@
+Datagrid here
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th ng-repeat="field in fields">
+					<span field="field.name">
+						{{field.label}}
+					</span>
+				</th>
+			</tr>
+		</thead>
+		<tbody ng-transclude>
+		</tbody>
+	</table>
+</div>
+
+<nav> 
+	<ul class="pagination">  
+  		<li ng-class="paginationState.current == 1 ? 'disabled' : ''">
+	  		<a ng-click="paginationState.current == 1 ? '': gotoPage($event, 'first')"><<</a>
+	  	</li>
+	  	<li ng-class="paginationState.current == 1 ? 'disabled' : ''">
+	  		<a ng-click="paginationState.current == 1 ? '': gotoPage($event, 'prev')"><</a>
+	  	</li>
+	  	<li ng-repeat="n in paginationState.list" ng-class="n == paginationState.current ? 'active' : ''">  
+	  		<a  ng-class="paginationState.current == n ? 'active' : ''"  ng-click="gotoPage($event, n)">{{n}}</a>
+	  	</li>
+	  	<li ng-class="paginationState.current == (paginationState.pages  ) || paginationState.pages == 1  ? 'disabled' : ''">
+	  		<a ng-click="paginationState.current == (paginationState.pages  ) || paginationState.pages == 1  ?  '': gotoPage($event, 'next')">></a>
+	  	</li>
+	  	<li ng-class="paginationState.current == (paginationState.pages ) || paginationState.pages == 1 ? 'disabled' : ''">
+	  		<a ng-click="paginationState.current == (paginationState.pages ) || paginationState.pages == 1 ? '' : gotoPage($event, 'last')">>></a>
+	  	</li>
+	</ul>
+ </nav>

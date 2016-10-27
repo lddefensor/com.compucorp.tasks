@@ -1,0 +1,61 @@
+<div class="open-weather-app">
+
+	<div class="app-wrapper"></div> 
+	<div class="loader" ng-show="locationDetected == true && weather == null">
+		<div class='uil-sunny-css' style='transform:scale(0.6);'>
+		 	<div class="uil-sunny-circle"></div>
+		 	<div class="uil-sunny-light">
+		 		<div></div>
+		 		<div></div>
+		 		<div></div>
+		 		<div></div>
+		 		<div></div>
+		 		<div></div>
+		 		<div></div>
+		 		<div></div>
+		 		<div></div>
+		 		<div></div>
+		 		<div></div>
+		 		<div></div>
+		 	</div>
+		 </div>
+		<div class="uil-sunny-text">Checking the weather...</div>
+	</div>
+	
+	<div ng-class="{'weather-wrapper':true}" ng-if="weather" weather="{{w.main}}">
+		<div class="weather"> 
+			<div class="row"> 
+				<div class="col-sm-6 text-left">
+					<h2>
+						{{weather.name}}
+					</h2>
+					<h4>{{weather.main.temp}} &#8451;</h4>
+				</div> 
+				<div class="col-sm-6 text-right">
+					<h2>
+						<i class="wi wi-owm-{{w.id}}"></i> 
+					</h2>
+					<h4>{{w.description}}</h4>
+				</div>   
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<h4>{{weather.main.humidity}}%</h4>
+					<h5>Humidity</h5>
+				</div>
+				<div class="col-sm-3">
+					<h4>{{weather.clouds.all}}%</h4>
+					<h5>Clouds</h5>
+				</div>
+				<div class="col-sm-3">
+					<h4>{{weather.main.pressure}} hpa</h4>
+					<h5>Pressure</h5>
+				</div>
+				<div class="col-sm-3">
+					<h4>{{weather.wind.speed}}  m/s</h4>
+					<h5>Wind</h5>
+				</div>
+			</div> 
+		</div>
+	</div>
+</div>

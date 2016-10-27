@@ -1,0 +1,14 @@
+<div class="get-location" ng-show="errorMessage"> 
+		<form > 
+			<div class="col-sm-6">
+				<select class="form-control" ng-model="countrycode"> 
+					<option value=''>Select Country</option>
+					<option ng-repeat="country in countries" value="{{country.code}}">{{country.name}}</option>
+				</select>
+ 			</div>
+			<div class="col-sm-6">
+				<input type="text" class="form-control" placeholder="Postal Code" ng-model="postalcode" />
+ 			</div>
+		</form>
+	</div> 
+</div>

@@ -1,0 +1,18 @@
+<div ng-class="{'weather-app':true,'launched':launched}">
+	<!-- <button
+		type="button"
+		ng-class="{'main-button btn':true,'btn-warning':!launched,'btn-default':launched }"
+		ng-click="toggleLaunched()"
+	>
+		{{launched ? 'Close App' : 'Launch App'}}
+	</button> -->
+	
+	<div class="app-wrapper" ng-show="launched"></div>
+	
+	<div class="app" ng-if="launched">
+		<auto-detect-location></auto-detect-location> 
+		<open-weather-app ng-class="{'hasWeather':weather}"></open-weather-app>
+		<get-location></get-location>
+	</div>
+</div> 
+
